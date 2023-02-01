@@ -1,0 +1,300 @@
+//-----------------------------------------------------------------------------
+
+/** \page intro Introduction
+
+The  \c  SLEEFE library  consists  of  a set  of  \c  C++ classes  for
+computing and representing sleefes of univariate polynomial functions
+in Bernstein-B&eacute;zier form.
+
+Sleefe  provides  a  tightly-sandwiching, piecewise-linear  upper  and
+lower bound for a piecewise polynomial on a uniformly-spaced partition
+of the function domain.
+
+The  bounds are  sharp for  quadratic  polynomials and  decrease by  a
+factor of 4 under uniform refinement.
+
+A detailed description of sleefes can be found in the following:
+
+\li                David                 Lutterkort.                <a
+href="http://www.cise.ufl.edu/research/SurfLab/papers/99envthesis.pdf">Doctoral
+Dissertation</a>, Purdue University, 2000.
+
+\li     David     Lutterkort     and     J&ouml;rg     Peters.      <a
+href="http://www.cise.ufl.edu/research/SurfLab/papers/compgeom.ps.gz">Linear
+Envelopes for Uniform B–spline Curves</a>.  In Curves and Surfaces, St
+Malo, France, p. 239–246, July 1-7, 2000.
+
+\li     David     Lutterkort     and     J&ouml;rg     Peters.      <a
+href="https://www.cise.ufl.edu/research/SurfLab/papers/nubspl.pdf">Tight
+Linear Envelopes for Splines</a>, <i>Numerische Mathematik</i>, 89(4),
+p. 735-748, Oct. 2001.
+
+\li      J&ouml;rg      Peters       and      Xiaobin      Wu.      <a
+href="https://www.cise.ufl.edu/research/SurfLab/papers/02stmaloSlefe.pdf">On
+the  Optimality  of  Piecewise  Linear Max-Norm  Enclosures  Based  on
+Slefes</a>,   International  Conference   on   Curves  and   Surfaces,
+Saint-Malo, France, 2002.
+
+*/
+
+//-----------------------------------------------------------------------------
+
+/** \page api Library API 
+
+To  build   a  sleefe   for  a   univariate  polynomial   function  in
+Bernstein-B&eacute;zier form,  you need to  create an instance  of the
+class \c UniSleefeBuilder using the default constructor. For instance,
+
+\code
+UniSleefeBuilder builder;
+\endcode
+
+creates  an  instance   named  \c  builder  of  the   class  class  \c
+UniSleefeBuilder.
+
+The next step  is to call the  method \c build() to  compute the lower
+and upper components of sleefe:
+
+\code
+UniSleefe build(int numberOfSegments, const std::vector<double> &coeffs) const;
+\endcode
+
+This method  takes the <i>number  of line segments</i> of  each sleefe
+component  and the  <i>Bernstein-B&eacute;zier  coefficients</i> of  a
+univariate polynomial function as input.
+
+Its output is an instance of  the class \c UniSleefe, which represents
+the lower and  upper components of the sleefe computed  from the given
+input.
+
+The API  of the class  \c UniSleefe is  very simple. It  offers public
+methods to obtain the coordinates  of the breakpoints (i.e., vertices)
+of the lower and upper components of the sleefe:
+
+\code
+const std::vector<double> &lowerValues() const;
+const std::vector<double> &upperValues() const;
+\endcode
+
+There are also two methods  for computing points on a piecewise-linear
+parametrization of the lower and  upper sleefe components.
+
+\code
+double lowerValueAt(double t) const;
+double upperValueAt(double t) const;
+\endcode
+
+For a given  value \f$t \in [0,1]\f$ (i.e.,  the univariate polynomial
+function domain), the two methods above provide lower and upper bounds
+for the value of the function at \f$t\f$, respectively.
+
+*/
+
+//-----------------------------------------------------------------------------
+
+/** \page example Example
+
+The following program illustrates the usage of the classes \c UniSleefeBuilder and \c UniSleefe.
+
+\code
+#include <Sleefe.hpp> // this is the only header file needed to use the library
+
+#include <cstdlib>
+#include <iomanip>
+#include <iostream>
+#include <vector>
+
+using namespace sleefe;
+
+int main() {
+  // For this example, let us define coefficients of univariate Bezier
+  // functions of degree 2 through 9. For each set of coefficients, we
+  // will build  sleefes with  2,...,d segments for  the corresponding
+  // function.
+  std::vector<std::vector<double>> bezierCoeffs = {
+      {0.0, 1.0, 0.8},                                    // degree 2
+      {0.0, 1.0, 0.8, -0.2},                              // degree 3
+      {0.0, 1.0, 0.8, -0.2, 2.5},                         // degree 4
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5},                    // degree 5
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0},               // degree 6
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2},          // degree 7
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2, 4.0},     // degree 8
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2, 4.0, 0.5} // degree 9
+  };
+
+  // To build one or more sleefes, we start by defining a builder.
+  UniSleefeBuilder builder;
+
+  std::cout << std::fixed << std::setprecision(10) << std::endl;
+
+  for (const auto &coeffs : bezierCoeffs) {
+    // Compute the degree of the Bezier function.
+    const auto degree = static_cast<int>(coeffs.size()) - 1;
+
+    // Create sleefes with 1,...,9 segments for the current function.
+    for (auto nSegs = 1; nSegs <= UniSleefeBuilder::MaximumNumberOfSegments;
+         ++nSegs) {
+      std::cout << "Degree " << degree << ", " << nSegs
+                << " segments(s): " << std::endl;
+
+      // A sleefe is created by calling method 'build()'.
+      const auto sleefe = builder.build(nSegs, coeffs);
+
+      // Display the values of the sleefe upper component breakpoints.
+      for (const auto &pt : sleefe.upperValues()) {
+        std::cout << pt << "  ";
+      }
+
+      std::cout << std::endl;
+
+      // Display the values of the sleefe lower component breakpoints.
+      for (const auto &pt : sleefe.lowerValues()) {
+        std::cout << pt << "  ";
+      }
+
+      std::cout << std::endl;
+    }
+
+    std::cout << std::endl;
+  }
+
+  return EXIT_SUCCESS;
+}
+\endcode
+
+To access the classes, we need to include a single header file:
+
+\code
+#include <Sleefe.hpp>
+\endcode
+
+Note that the library source code belongs to the namespace \c sleefe:
+
+\code
+using namespace sleefe;
+\endcode
+
+In function \c main(),  we define Bernstein-B&eacute;zier coefficients
+for polynomial functions of degree 2 through 9:
+
+\code
+  std::vector<std::vector<double>> bezierCoeffs = {
+      {0.0, 1.0, 0.8},                                    // degree 2
+      {0.0, 1.0, 0.8, -0.2},                              // degree 3
+      {0.0, 1.0, 0.8, -0.2, 2.5},                         // degree 4
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5},                    // degree 5
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0},               // degree 6
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2},          // degree 7
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2, 4.0},     // degree 8
+      {0.0, 1.0, 0.8, -0.2, 2.5, 3.5, 2.0, 5.2, 4.0, 0.5} // degree 9
+  };
+\endcode
+
+Each set of  coefficients corresponds to a  unique polynomial function
+of fixed  degree.  The  code computes sleefes  with varying  number of
+line segments for each function.  More specifically, each iteration of
+the outer loop
+
+\code
+for (const auto &coeffs : bezierCoeffs) {
+  ...
+}
+\endcode
+
+creates \c  UniSleefeBuilder::MaximumNumberOfSegments sleefes  for the
+function  defined  by  the   current  set  of  Bernstein-B&eacute;zier
+coefficients in \c coeffs. Each iteration of the inner loop
+
+\code
+for (auto nSegs = 1; nSegs <= UniSleefeBuilder::MaximumNumberOfSegments; ++nSegs) {
+  ...
+}
+\endcode
+
+computes  one  sleefe whose  components  have  exactly \c  nSegs  line
+segments   each.    Currently,   the   value  of   the   constant   \c
+UniSleefeBuilder::MaximumNumberOfSegments is  limited to  \f$9\f$.
+
+Observe that the instance of  the class \c UniSleefeBuilder is created
+before the outer loop is reached:
+
+\code
+UniSleefeBuilder builder;
+\endcode
+
+This is because we only need one builder. All sleefes are created with
+this single builder instance inside the inner loop:
+
+\code
+for (auto nSegs = 1; nSegs <= UniSleefeBuilder::MaximumNumberOfSegments; ++nSegs) {
+  ...
+  const auto sleefe = builder.build(nSegs, coeffs);
+  ...
+ }
+\endcode
+
+After building  the sleefe, the  bounds associated with its  lower and
+upper components are obtained by calling methods from the \c UniSleefe
+class:
+
+\code
+sleefe.upperValues()
+\endcode
+
+and
+
+\code
+sleefe.lowerValues()
+\endcode
+
+The code simply writes the collected bounds to the standard output:
+
+\code
+for (const auto &pt : sleefe.upperValues()) {
+  std::cout << pt << "  ";
+}
+
+...
+
+for (const auto &pt : sleefe.lowerValues()) {
+  std::cout << pt << "  ";
+}
+\endcode
+
+The  example in  this  section  is part  of  the  library source  code
+distribution. You can also take a look at the unit tests that are also
+part of the same distribution to  see more examples of the classes API
+usage.
+
+*/
+
+//-----------------------------------------------------------------------------
+
+/** \page lic License
+
+<p><strong>MIT License</strong>
+
+Copyright (c) 2023 Marcelo Ferreira Siqueira and J&ouml;rg Peters
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
+
+//-----------------------------------------------------------------------------
+
