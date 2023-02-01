@@ -5,6 +5,11 @@
 #include <vector>
 
 namespace sleefe {
+
+/**
+ * \class UniSleefeBuilder
+ * \brief A class to build sleefes from Bezier coefficients of univariate polynomial functions. 
+ */
 class UniSleefeBuilder {
 public:
   /** Default constructor. */
@@ -21,7 +26,13 @@ public:
                   const std::vector<double> &coeffs) const;
 
 private:
-  /** Computes the affine combination of two values. */
+  /** 
+   * Computes the affine combination of two values.
+   * \param t The ratio of the affine combination.
+   * \param a A real value.
+   * \param b A real value.   
+   * \return The value \f$(1 - t) a + t b\f$ 
+   */
   double aerp(double t, double a, double b) const;
 
 public:

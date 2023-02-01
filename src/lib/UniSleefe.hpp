@@ -3,6 +3,11 @@
 #include <vector>
 
 namespace sleefe {
+
+/**
+ * \class UniSleefe
+ * \brief A class representing sleefes of univariate Bezier polynomial functions. 
+ */
 class UniSleefe {
 public:
   /**
@@ -43,7 +48,7 @@ public:
   const std::vector<double> &lowerValues() const;
 
   /**
-   * \fn lowerValues()
+   * \fn upperValues()
    * \brief Returns the values of the upper component of the sleefe at the
    * breakpoints.
    * \return The values of the upper component of the sleefe at the
@@ -59,7 +64,7 @@ public:
   int numberOfSegments() const;
 
 private:
-  /** The number of segments of the sleefe. */
+  /** The number of segments of each sleefe component. */
   int _numberOfSegments;
 
   /** The values of the lower component of the sleefe. */
