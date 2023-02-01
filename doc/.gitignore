@@ -1,5 +1,7 @@
 # Ignore contents
-*
+html
+latex
+*~
 # Except this file
 !.gitignore
 

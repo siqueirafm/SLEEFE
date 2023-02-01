@@ -10,7 +10,7 @@ using namespace sleefe;
 int main() {
   // For this example, let us define coefficients of univariate Bezier
   // functions of degree 2 through 9. For each set of coefficients, we
-  // will build  sleefes with  2,...,d segments for  the corresponding
+  // will build  sleefes with  1,...,d segments for  the corresponding
   // function.
   std::vector<std::vector<double>> bezierCoeffs = {
       {0.0, 1.0, 0.8},                                    // degree 2
