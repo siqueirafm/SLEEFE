@@ -17,17 +17,17 @@ breakpoints) each.
 
 The source code is organized as follows:
 
-* bin            - subdirectory where the executable `sleefe-demo` will be installed
-* doc            - subdirectory where `Doxygen` documentation files are
-* ide            - subdirectory where ready-to-use project files for Visual Studio and Xcode are
-* include        - subdirectory where header files of the library will be installed
-* lib            - subdirectory where the lib file of the library will be installed
-* plots          - subdirectory containing plots of the anti-difference functions
-* src            - subdirectory containing the library, demo, and uni tests source files
-* tst            - subdirectory where the executable `sleefe-tst` will be installed 
-* CMakeLists.txt - input file for the `CMake` build system
-* LICENSE.md     - copyright and license file
-* README.md      - this file
+* `bin`            - subdirectory where the executable `sleefe-demo` will be installed
+* `doc`            - subdirectory where `Doxygen` documentation files are
+* `ide`            - subdirectory where ready-to-use project files for Visual Studio and Xcode are
+* `include`        - subdirectory where header files of the library will be installed
+* `lib`            - subdirectory where the lib file of the library will be installed
+* `plots`          - subdirectory containing plots of the anti-difference functions
+* `src`            - subdirectory containing the library, demo, and uni tests source files
+* `tst`           - subdirectory where the executable `sleefe-tst` will be installed 
+* `CMakeLists.txt` - input file for the `CMake` build system
+* `LICENSE.md`     - copyright and license file
+* `README.md`      - this file
 
 Detailed documentation of the code can be found in the file `refman.pdf` inside the directory `doc`.
 
