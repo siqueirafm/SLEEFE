@@ -3,7 +3,14 @@ A library to build Subdividable Linear Equi-spaced Efficient Function Enclosures
 
 ## INTRODUCTION
 
-This repository contains the source code and documentation files for the library `SLEEFE`. This library offers functionality to build tight lower and upper piecewise-linear envelopes for the graph of univariate polynomial functions in Bernstein-Bézier form. The picture below illustrates a sleefe with three line segments (i.e., four breakpoints) for a univariate polynomial function of degree 3, which is defined by the Bernstein-Bézier coefficients `3`, `-2`, `-1`, and `0.5`. 
+This repository contains the source code and documentation files for
+the library `SLEEFE`. This library offers functionality to build tight
+lower and upper piecewise-linear envelopes for the graph of univariate
+polynomial functions in Bernstein-Bézier form. The picture below
+illustrates a sleefe for a univariate polynomial function of degree 3.
+The Bernstein-Bézier coefficients of the function are `3`, `-2`, `-1`, and `0.5`.
+The lower and upper envelopes of the sleefe have three line segments (i.e., four
+breakpoints) each. 
 
 [sleefe example](doc/img/sleefe_example.png)
 
