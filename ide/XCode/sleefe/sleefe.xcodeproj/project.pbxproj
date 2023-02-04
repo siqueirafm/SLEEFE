@@ -1,0 +1,499 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		99B1F7EC298DEB1500A0E2F4 /* UniSleefeBuilder.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 99B1F7E6298DEB1500A0E2F4 /* UniSleefeBuilder.hpp */; };
+		99B1F7ED298DEB1500A0E2F4 /* UniSleefe.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 99B1F7E7298DEB1500A0E2F4 /* UniSleefe.hpp */; };
+		99B1F7EE298DEB1500A0E2F4 /* UniSleefe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B1F7E8298DEB1500A0E2F4 /* UniSleefe.cpp */; };
+		99B1F7EF298DEB1500A0E2F4 /* UniSleefeTables.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B1F7E9298DEB1500A0E2F4 /* UniSleefeTables.cpp */; };
+		99B1F7F0298DEB1500A0E2F4 /* Sleefe.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 99B1F7EA298DEB1500A0E2F4 /* Sleefe.hpp */; };
+		99B1F7F1298DEB1500A0E2F4 /* UniSleefeBuilder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B1F7EB298DEB1500A0E2F4 /* UniSleefeBuilder.cpp */; };
+		99B1F7FE298DF7E100A0E2F4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99B1F7FD298DF7E100A0E2F4 /* main.cpp */; };
+		99B1F800298DF85100A0E2F4 /* libsleefe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99B1F7DF298DEACC00A0E2F4 /* libsleefe.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		99B1F801298DF85100A0E2F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B1F7D7298DEACC00A0E2F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99B1F7DE298DEACC00A0E2F4;
+			remoteInfo = sleefe;
+		};
+		99B1F80E298DFF0800A0E2F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B1F7D7298DEACC00A0E2F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99B1F7DE298DEACC00A0E2F4;
+			remoteInfo = sleefe;
+		};
+		99B1F810298DFF0C00A0E2F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 99B1F7D7298DEACC00A0E2F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99B1F7F5298DF7A200A0E2F4;
+			remoteInfo = "sleefe-demo";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		99B1F7F4298DF7A200A0E2F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		99B1F805298DFEF100A0E2F4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		99B1F7DF298DEACC00A0E2F4 /* libsleefe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libsleefe.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B1F7E6298DEB1500A0E2F4 /* UniSleefeBuilder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UniSleefeBuilder.hpp; path = ../../../src/lib/UniSleefeBuilder.hpp; sourceTree = "<group>"; };
+		99B1F7E7298DEB1500A0E2F4 /* UniSleefe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = UniSleefe.hpp; path = ../../../src/lib/UniSleefe.hpp; sourceTree = "<group>"; };
+		99B1F7E8298DEB1500A0E2F4 /* UniSleefe.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UniSleefe.cpp; path = ../../../src/lib/UniSleefe.cpp; sourceTree = "<group>"; };
+		99B1F7E9298DEB1500A0E2F4 /* UniSleefeTables.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UniSleefeTables.cpp; path = ../../../src/lib/UniSleefeTables.cpp; sourceTree = "<group>"; };
+		99B1F7EA298DEB1500A0E2F4 /* Sleefe.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Sleefe.hpp; path = ../../../src/lib/Sleefe.hpp; sourceTree = "<group>"; };
+		99B1F7EB298DEB1500A0E2F4 /* UniSleefeBuilder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UniSleefeBuilder.cpp; path = ../../../src/lib/UniSleefeBuilder.cpp; sourceTree = "<group>"; };
+		99B1F7F6298DF7A200A0E2F4 /* sleefe-demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "sleefe-demo"; sourceTree = BUILT_PRODUCTS_DIR; };
+		99B1F7FD298DF7E100A0E2F4 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../../../src/demo/main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99B1F7DD298DEACC00A0E2F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B1F7F3298DF7A200A0E2F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B1F800298DF85100A0E2F4 /* libsleefe.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B1F804298DFEF100A0E2F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		99B1F7D6298DEACC00A0E2F4 = {
+			isa = PBXGroup;
+			children = (
+				99B1F7EA298DEB1500A0E2F4 /* Sleefe.hpp */,
+				99B1F7E8298DEB1500A0E2F4 /* UniSleefe.cpp */,
+				99B1F7E7298DEB1500A0E2F4 /* UniSleefe.hpp */,
+				99B1F7EB298DEB1500A0E2F4 /* UniSleefeBuilder.cpp */,
+				99B1F7E6298DEB1500A0E2F4 /* UniSleefeBuilder.hpp */,
+				99B1F7E9298DEB1500A0E2F4 /* UniSleefeTables.cpp */,
+				99B1F7F7298DF7A200A0E2F4 /* sleefe-demo */,
+				99B1F7E0298DEACC00A0E2F4 /* Products */,
+				99B1F7FF298DF85100A0E2F4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		99B1F7E0298DEACC00A0E2F4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				99B1F7DF298DEACC00A0E2F4 /* libsleefe.a */,
+				99B1F7F6298DF7A200A0E2F4 /* sleefe-demo */
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		99B1F7F7298DF7A200A0E2F4 /* sleefe-demo */ = {
+			isa = PBXGroup;
+			children = (
+				99B1F7FD298DF7E100A0E2F4 /* main.cpp */,
+			);
+			path = "sleefe-demo";
+			sourceTree = "<group>";
+		};
+		99B1F7FF298DF85100A0E2F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		99B1F7DB298DEACC00A0E2F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B1F7EC298DEB1500A0E2F4 /* UniSleefeBuilder.hpp in Headers */,
+				99B1F7F0298DEB1500A0E2F4 /* Sleefe.hpp in Headers */,
+				99B1F7ED298DEB1500A0E2F4 /* UniSleefe.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		99B1F7DE298DEACC00A0E2F4 /* sleefe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B1F7E3298DEACC00A0E2F4 /* Build configuration list for PBXNativeTarget "sleefe" */;
+			buildPhases = (
+				99B1F7DB298DEACC00A0E2F4 /* Headers */,
+				99B1F7DC298DEACC00A0E2F4 /* Sources */,
+				99B1F7DD298DEACC00A0E2F4 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = sleefe;
+			productName = sleefe;
+			productReference = 99B1F7DF298DEACC00A0E2F4 /* libsleefe.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		99B1F7F5298DF7A200A0E2F4 /* sleefe-demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 99B1F7FA298DF7A200A0E2F4 /* Build configuration list for PBXNativeTarget "sleefe-demo" */;
+			buildPhases = (
+				99B1F7F2298DF7A200A0E2F4 /* Sources */,
+				99B1F7F3298DF7A200A0E2F4 /* Frameworks */,
+				99B1F7F4298DF7A200A0E2F4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				99B1F802298DF85100A0E2F4 /* PBXTargetDependency */,
+			);
+			name = "sleefe-demo";
+			productName = "sleefe-demo";
+			productReference = 99B1F7F6298DF7A200A0E2F4 /* sleefe-demo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		99B1F7D7298DEACC00A0E2F4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					99B1F7DE298DEACC00A0E2F4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					99B1F7F5298DF7A200A0E2F4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					99B1F806298DFEF100A0E2F4 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 99B1F7DA298DEACC00A0E2F4 /* Build configuration list for PBXProject "sleefe" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 99B1F7D6298DEACC00A0E2F4;
+			productRefGroup = 99B1F7E0298DEACC00A0E2F4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				99B1F7DE298DEACC00A0E2F4 /* sleefe */,
+				99B1F7F5298DF7A200A0E2F4 /* sleefe-demo */
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		99B1F7DC298DEACC00A0E2F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B1F7EE298DEB1500A0E2F4 /* UniSleefe.cpp in Sources */,
+				99B1F7F1298DEB1500A0E2F4 /* UniSleefeBuilder.cpp in Sources */,
+				99B1F7EF298DEB1500A0E2F4 /* UniSleefeTables.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B1F7F2298DF7A200A0E2F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99B1F7FE298DF7E100A0E2F4 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		99B1F803298DFEF100A0E2F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		99B1F802298DF85100A0E2F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99B1F7DE298DEACC00A0E2F4 /* sleefe */;
+			targetProxy = 99B1F801298DF85100A0E2F4 /* PBXContainerItemProxy */;
+		};
+		99B1F80F298DFF0800A0E2F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99B1F7DE298DEACC00A0E2F4 /* sleefe */;
+			targetProxy = 99B1F80E298DFF0800A0E2F4 /* PBXContainerItemProxy */;
+		};
+		99B1F811298DFF0C00A0E2F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 99B1F7F5298DF7A200A0E2F4 /* sleefe-demo */;
+			targetProxy = 99B1F810298DFF0C00A0E2F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		99B1F7E1298DEACC00A0E2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		99B1F7E2298DEACC00A0E2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		99B1F7E4298DEACC00A0E2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				EXECUTABLE_PREFIX = lib;
+				"INSTALL_PATH[sdk=macosx*]" = ../../../lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		99B1F7E5298DEACC00A0E2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
+				CODE_SIGN_STYLE = Automatic;
+				DEPLOYMENT_LOCATION = NO;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				EXECUTABLE_PREFIX = lib;
+				"INSTALL_PATH[sdk=macosx*]" = ../../../lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		99B1F7FB298DF7A200A0E2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../../../src/lib;
+				LIBRARY_SEARCH_PATHS = ../../../lib;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99B1F7FC298DF7A200A0E2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				"HEADER_SEARCH_PATHS[arch=*]" = ../../../src/lib;
+				LIBRARY_SEARCH_PATHS = ../../../lib;
+				"LIBRARY_SEARCH_PATHS[arch=*]" = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		99B1F80C298DFEF100A0E2F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		99B1F80D298DFEF100A0E2F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N55V98G3H3;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		99B1F7DA298DEACC00A0E2F4 /* Build configuration list for PBXProject "sleefe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B1F7E1298DEACC00A0E2F4 /* Debug */,
+				99B1F7E2298DEACC00A0E2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99B1F7E3298DEACC00A0E2F4 /* Build configuration list for PBXNativeTarget "sleefe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B1F7E4298DEACC00A0E2F4 /* Debug */,
+				99B1F7E5298DEACC00A0E2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		99B1F7FA298DF7A200A0E2F4 /* Build configuration list for PBXNativeTarget "sleefe-demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				99B1F7FB298DF7A200A0E2F4 /* Debug */,
+				99B1F7FC298DF7A200A0E2F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 99B1F7D7298DEACC00A0E2F4 /* Project object */;
+}
