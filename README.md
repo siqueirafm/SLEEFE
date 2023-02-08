@@ -12,7 +12,7 @@ The Bernstein-Bézier coefficients of the function are `3`, `-2`, `-1`,
 and `0.5`.   The lower and  upper envelopes  of the sleefe  have three
 line segments (i.e., four breakpoints) each.
 
-![sleefe example](doc/img/sleefe_example.png|width=100px)
+![sleefe example](doc/img/sleefe_example.png | width=100px)
 
 The source code is organized as follows:
 
