@@ -3,23 +3,22 @@ A library to build Subdividable Linear Equi-spaced Efficient Function Enclosures
 
 ## INTRODUCTION
 
-This repository contains the source code and documentation files for
+This repository contains  the source code and  documentation files for
 the library `SLEEFE`. This library offers functionality to build tight
 lower and upper piecewise-linear envelopes for the graph of univariate
-polynomial functions in Bernstein-Bézier form. The picture below
+polynomial  functions  in  Bernstein-Bézier form.  The  picture  below
 illustrates a sleefe for a univariate polynomial function of degree 3.
-The Bernstein-Bézier coefficients of the function are `3`, `-2`, `-1`, and `0.5`.
-The lower and upper envelopes of the sleefe have three line segments (i.e., four
-breakpoints) each. 
+The Bernstein-Bézier coefficients of the function are `3`, `-2`, `-1`,
+and `0.5`.   The lower and  upper envelopes  of the sleefe  have three
+line segments (i.e., four breakpoints) each.
 
-[sleefe example](doc/img/sleefe_example.png)
-
+![sleefe example](doc/img/sleefe_example.png|width=100px)
 
 The source code is organized as follows:
 
 * `bin`            - subdirectory where the executable `sleefe-demo` will be installed
 * `doc`            - subdirectory where `Doxygen` documentation files are
-* `ide`            - subdirectory where ready-to-use project files for Visual Studio and Xcode are
+* `ide`            - subdirectory where ready-to-use project files for Visual Studio, Visual Code, and Xcode are
 * `include`        - subdirectory where header files of the library will be installed
 * `lib`            - subdirectory where the lib file of the library will be installed
 * `plots`          - subdirectory containing plots of the anti-difference functions
@@ -29,18 +28,18 @@ The source code is organized as follows:
 * `LICENSE.md`     - copyright and license file
 * `README.md`      - this file
 
-Detailed documentation of the code can be found in the file `refman.pdf` inside the directory `doc`.
+> Detailed documentation of the code can be found in the file `refman.pdf` inside the directory `doc`.
 
 ## INSTALLATION
 
-You will need `CMake` 3.15 or higher and a C++ compiler that supports C++ 17 to
-build the library, the demo, and (optionally) the unit tests. If you enable the 
-generation of unit tests, then `CMake` will try to download and install the *GTest* 
-library from [here](https://github.com/google/googletest/). Both options have 
-successfully been built with `CMake` version 3.22.1 on Linux (Ubuntu 22.04 LTS 
-with GNU g++ 11.2.0), Windows 10 (MS Visual Studio 17), and macOS Monterrey version 
-12.6.2 (clang version 14.0.0).
-
+You will need `CMake` 3.15 or  higher and a C++ compiler that supports
+C++  17 to  build the  library, the  demo, and  (optionally) the  unit
+tests. If you  enable the generation of unit tests,  then `CMake` will
+try   to    download   and   install   the    *GTest*   library   from
+[here](https://github.com/google/googletest/).   Both   options   have
+successfully been built  with `CMake` version 3.22.1  on Linux (Ubuntu
+22.04 LTS with GNU g++ 11.2.0),  Windows 10 (MS Visual Studio 17), and
+macOS Monterrey version 12.6.2 (clang version 14.0.0).
 
 To build and install the library, follow the steps below:
 
@@ -89,7 +88,13 @@ be
 
 + Run `cmake -G Xcode -S . -B build`
 
-Alternatively, you can use the project files that can be found in directory `ide`.
+**If you  do not  want to  use CMake**, you  can try  the ready-to-use
+projects  in directory  `ide`.   There are  ready-to-use projects  for
+Visual Studio (Windows),  XCode (macOSX), and Linux  (Visual Code). In
+all  cases, the  paths  are  *relative*.  So,  do  **not** move  these
+projects out of  directory `ide`. During the build,  the projects will
+place the library file and the executable demo file in the directories
+`lib` and `bin`, respectively.
 
 ##  References
 
