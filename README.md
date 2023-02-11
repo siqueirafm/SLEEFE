@@ -28,7 +28,9 @@ The source code is organized as follows:
 * `LICENSE.md`     - copyright and license file
 * `README.md`      - this file
 
-> Detailed documentation of the code can be found in the file `refman.pdf` inside the directory `doc`.
+## USAGE
+
+Detailed documentation on how to use the library can be found in the file `refman.pdf` inside the directory `doc`
 
 ## INSTALLATION
 
@@ -40,6 +42,20 @@ try   to    download   and   install   the    *GTest*   library   from
 successfully been built  with `CMake` version 3.22.1  on Linux (Ubuntu
 22.04 LTS with GNU g++ 11.2.0),  Windows 10 (MS Visual Studio 17), and
 macOS Monterrey version 12.6.2 (clang version 14.0.0).
+
+If you wish `CMake' to create an Xcode project, then 2 above should
+be
+
++ Run `cmake -G Xcode -S . -B build`
+
+**If you prefer  not to use `CMake` to install  the library**, you can
+try  the   ready-to-use  projects  in  directory   `ide`.   There  are
+ready-to-use projects for Visual Studio (Windows), XCode (macOSX), and
+Linux (Visual Code).  In all cases,  the paths are *relative*.  So, do
+**not** move these projects out of  directory `ide` nor did move their
+files around.  During  the build, the projects will  place the library
+file and the executable demo file  in the directories `lib` and `bin`,
+respectively, using the relative paths.
 
 To build and install the library, follow the steps below:
 
@@ -81,20 +97,6 @@ be
 The exact generator depends on the version of your Visual Studio. Please, refer 
 to the CMake [documentation](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html) 
 to determine which one is right for you.
-
-
-If you wish `CMake' to create an Xcode project, then 2 above should
-be
-
-+ Run `cmake -G Xcode -S . -B build`
-
-**If you  do not  want to  use CMake**, you  can try  the ready-to-use
-projects  in directory  `ide`.   There are  ready-to-use projects  for
-Visual Studio (Windows),  XCode (macOSX), and Linux  (Visual Code). In
-all  cases, the  paths  are  *relative*.  So,  do  **not** move  these
-projects out of  directory `ide`. During the build,  the projects will
-place the library file and the executable demo file in the directories
-`lib` and `bin`, respectively.
 
 ##  References
 
